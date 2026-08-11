@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "BrowserSync",
+  "version": "0.1.0",
+  "description": "Keeps bookmarks in sync with another Chromium browser on this PC via a local BrowserSync host.",
+  "permissions": ["bookmarks", "storage", "alarms"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAucId+PGjssdiq2RPASiXCeu0fA1H/T9nFssWOo3EB0K64kROJeQrR1GdnTs7uLysXsAam6bmyuqDmAcvXQkzoswnNspL4TuwlmRqoSM8Y3UYR/EnEPOlTpRSHwZrA8fJKSULWM5Kp7c3ffwozf0JwrHh74uyRrYeSeXVxOesAW0ZvJAZR8H7cg4llxZ5+ngxlYdOMkY1BDogc9tVpljJXqjnssSgM0NFf3quhotCv0YdnrNfVMIcqqbAmDzIj6QSMDXfSThrgs7qe+LXNo41zYcxvysjopuDw9mMq7g6+Cd3hmmBjlW9PebisdGxNj8Fbs56bc42Jv40ru3CxTAMWQIDAQAB"
+}

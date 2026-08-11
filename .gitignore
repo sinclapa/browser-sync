@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+publish/
+TestResults/
+
+# SQLite databases. The real one lives in %LOCALAPPDATA%\BrowserSync, but `dotnet ef` drops a
+# designtime.db next to the Core project and ad-hoc verification databases turn up wherever
+# they're run from — none of them belong in the repo.
+*.db
+*.db-shm
+*.db-wal
+
+# Logs (the ones that matter are written to %LOCALAPPDATA%\BrowserSync\logs)
+*.log
+
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# OS
+Thumbs.db
+.DS_Store
