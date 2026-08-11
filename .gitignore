@@ -2,6 +2,7 @@
 bin/
 obj/
 publish/
+artifacts/
 TestResults/
 
 # SQLite databases. The real one lives in %LOCALAPPDATA%\BrowserSync, but `dotnet ef` drops a

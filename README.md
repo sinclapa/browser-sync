@@ -12,7 +12,20 @@ See [`docs/architecture.md`](docs/architecture.md) for how it works and
 - .NET 8 SDK (or newer — an installed .NET 9 SDK builds `net8.0`-targeted projects fine)
 - Chrome and/or Edge with Developer mode enabled for extensions
 
-## Running the host
+## Installing (recommended)
+
+```powershell
+.\scripts\deploy.ps1              # add -StartWithWindows to also run it at login
+```
+
+Publishes a self-contained single-file exe and installs it to
+`%LOCALAPPDATA%\BrowserSync\app`, then starts it. The install lives outside the repo
+deliberately: "Start with Windows" stores whatever path the running exe came from, so pointing
+it at `bin\Release\...` would break as soon as the repo is cleaned or moved. Any running
+instance is stopped first — it holds its own DLLs open, and publishing over a live process fails
+with an unhelpful file-lock error.
+
+## Running from source (development)
 
 ```
 dotnet run --project src\BrowserSync.Host
